@@ -16,7 +16,9 @@ const registrar = (nombre, edad, tipoAnimal, colorAnimal, enfermedad) => {
 
 const leer = () => {
   const citas = JSON.parse(fs.readFileSync("citas.json", "utf-8"));
-  console.log(citas);
+  citas.forEach((cita) => {
+    console.log(cita);
+  });
 };
 
 module.exports = { registrar, leer };
